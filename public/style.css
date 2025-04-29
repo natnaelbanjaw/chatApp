@@ -151,15 +151,16 @@ box-shadow: -2px 2px 4px #dcdcdc;
     body {
         flex-direction: column;
         padding: 10px;
+        /* height:600px ; */
     }
 
     .message-container {
-        width: 100%;
+        max-width: 60%;
         /* height: 500px; */
     }
 
     .message-left, .message-right {
-        max-width: 80%;
+        max-width: 30%;
         font-size: 16px;
     }
 
@@ -187,7 +188,7 @@ box-shadow: -2px 2px 4px #dcdcdc;
     }
 
     .send-button {
-        height: 40px;
+        /* height: 40px; */
         font-size: 14px;
     }
 
