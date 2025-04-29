@@ -155,7 +155,7 @@ box-shadow: -2px 2px 4px #dcdcdc;
 
     .message-container {
         width: 100%;
-        height: 500px;
+        /* height: 500px; */
     }
 
     .message-left, .message-right {
@@ -181,7 +181,9 @@ box-shadow: -2px 2px 4px #dcdcdc;
     .message-input {
         height: 40px;
         font-size: 14px;
-        margin-bottom: 8px;
+        /* margin-bottom: 8px; */
+        border: #2d2d2d solid 1px;
+
     }
 
     .send-button {
@@ -192,5 +194,9 @@ box-shadow: -2px 2px 4px #dcdcdc;
     .clients-total {
         font-size: 14px;
         margin: 10px 0;
+    }
+
+    .v-divider{
+        height: 0px;    
     }
 }
