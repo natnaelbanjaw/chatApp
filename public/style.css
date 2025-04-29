@@ -156,13 +156,13 @@ box-shadow: -2px 2px 4px #dcdcdc;
 
     .main{
         margin: 10px;
-        width: 270px;
+        width: 290px;
     }
 
     .message-container {
-        width: 260px;
+        width: 290px;
         margin: auto auto;
-        height: 320px;
+        height: 420px;
         /* height: 500px; */
     }
 
