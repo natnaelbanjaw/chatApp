@@ -1,69 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="/socket.io/socket.io.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
-        <!-- <script src="/socket.io./socket.io.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <!-- <script src="./main.js"></script> -->
-    <title>chat app</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .login-box h2 {
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    input[type="password"] {
+      padding: 12px 16px;
+      width: 100%;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      transition: border 0.3s;
+    }
+
+    input[type="password"]:focus {
+      border-color: #667eea;
+      outline: none;
+    }
+
+    button {
+      padding: 12px 20px;
+      width: 100%;
+      background-color: #667eea;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #5a67d8;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
+  <div class="login-box">
+    <h2>Enter Chat</h2>
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="checkPassword()">Login</button>
+    <div class="error" id="error"></div>
+  </div>
 
-    <h1 class="title"> Ichat💭 </h1>
+  <script>
+    const correctPassword = "natyn"; // <-- Change this
 
-<div class="main">
-    <div class="name">
-        <span><i class="far fa-user"></i></span>
-        <input type="text" id="name-input" class="name-input" value="Enter your name.." maxlength="20">
-    </div>
-
-    <ul class="message-container" id="message-container">
-        <li class="message-feedback">
-            <p class="feedback" id="feedback">
-
-            </p>
-        </li>
-        
-        <li class="message-left">
-            <p class="message">
-
-                <span> </span>
-            </p>
-        </li>
-
-<li class="message-right">
-            <p class="message">
- 
-                <span>  </span>
-            </p>
-        </li>
-
-        
-    </ul>
-
-    <form class="message-form" id="message-form">
-        <input type="text" name="message" id="message-input" class="message-input" placeholder="type here..">
-        <div class="v-divider"></div>
-        <button type="submit" class="send-button">
-            send <span><i class="fas fa-paper-plane"></i></span>
-        </button>
-    </form>
-
-   
-</div>
-
-<h3 class="clients-total" id="clients-total">
-    Total clients: 2
-</h3>
-
-<!-- <script src="/socket.io./socket.io.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-<script src="main.js" defer></script> 
-
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const errorDiv = document.getElementById("error");
+      if (input === correctPassword) {
+        window.location.href = "./main.html"; // redirect to chat page
+      } else {
+        errorDiv.textContent = "Incorrect password. Try again.";
+      }
+    }
+  </script>
 </body>
 </html>
