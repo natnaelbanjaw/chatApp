@@ -137,3 +137,60 @@ box-shadow: -2px 2px 4px #dcdcdc;
     margin: 20px 0;
     color: #7e7e7e;
 }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .message-container {
+        width: 100%;
+        height: 500px;
+    }
+
+    .message-left, .message-right {
+        max-width: 80%;
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 24px;
+        padding: 6px 12px;
+    }
+
+    .name-input {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .message-form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .message-input {
+        height: 40px;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .send-button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .clients-total {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+}
