@@ -154,13 +154,20 @@ box-shadow: -2px 2px 4px #dcdcdc;
         /* height:600px ; */
     }
 
+    .main{
+        margin: 10px;
+        width: 270px;
+    }
+
     .message-container {
-        max-width: 60%;
+        width: 260px;
+        margin: auto auto;
+        height: 320px;
         /* height: 500px; */
     }
 
     .message-left, .message-right {
-        max-width: 30%;
+        max-width: 50%;
         font-size: 16px;
     }
 
@@ -180,7 +187,7 @@ box-shadow: -2px 2px 4px #dcdcdc;
     }
 
     .message-input {
-        height: 40px;
+        /* height: 40px; */
         font-size: 14px;
         /* margin-bottom: 8px; */
         border: #2d2d2d solid 1px;
